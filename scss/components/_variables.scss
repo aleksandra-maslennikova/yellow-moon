@@ -1,0 +1,39 @@
+// -----------------Type--------------------------
+$text-base-color: #8e8e8e;
+$text-primary-color:#ffe600;
+$text-dark-color:#131316;
+$text-invert-color: #fff;
+$body-color: $text-base-color;
+$body-bg: #fff;
+$font-size-base: 15px;
+$line-height-base: 1.4;
+$font-family-base: 'Roboto', Arial, sans-serif;
+$link-color: $text-base-color;
+$link-color-hover: $text-dark-color;
+$heading-color: $text-dark-color;
+$heading-font-weight: 400;
+$heading-font-size-1: ceil($font-size-base * 2.666); //~40px
+$heading-margin-1: 1em !default;
+$heading-font-size-2: ceil($font-size-base * 2); //~30px
+$heading-margin-2: 1em !default;
+$heading-font-size-3: ceil($font-size-base * 1.666); //~25px
+$heading-margin-3: 1em !default;
+$heading-font-size-4: ceil($font-size-base * 1.2); //~18px
+$heading-margin-4: 1em !default;
+$heading-font-size-5:ceil($font-size-base * 1); //~15px
+$heading-margin-5: 1em !default;
+$heading-font-size-6: ceil($font-size-base * 0.8); //~12px
+$heading-margin-6: 1em !default;
+
+
+//-----------------Buttons---------------//
+
+$btn-color: #fff;
+$btn-font-size: $font-size-base;
+$btn-bg: transparent;
+$btn-border: 1px solid $text-primary-color;
+$btn-border-radius:none;
+$btn-padding: 22px 85px;
+$btn-color-hover: none;
+$btn-bg-hover: rgba(0,0,0,0.3);
+$btn-border-color-hover: $btn-border;

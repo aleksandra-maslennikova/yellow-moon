@@ -1,0 +1,243 @@
+/**
+ * Description: main styles.
+ * Version: 1.0.0
+ * Last update: 17.03.2017
+ * Author: alex.maslennikova19@gmail.com
+ */
+@import "components/variables";
+@import "components/normalize";
+@import "components/mixins";
+@import "components/include-media";
+@import "components/helpers";
+@import "components/global";
+@import "components/type";
+@import "components/btns";
+@import "components/forms";
+@import "components/block";
+@import "components/navbar";
+@import "components/background";
+@import "components/text-color";
+
+
+
+
+$breakpoints: (
+	'screen-xs': 480px,
+	'screen-sm': 768px,
+	'screen-md': 992px,
+	'screen-lg': 1200px
+);
+// keywords
+$media-expressions: (
+	'screen': 'screen',
+	'print': 'print',
+	'handheld': 'handheld',
+	'landscape': '(orientation: landscape)',
+	'portrait': '(orientation: portrait)',
+	'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+	'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6{
+	text-transform: uppercase;
+	font-weight: normal;
+}
+
+.main{
+	text-align: center;
+	&-logo{
+		margin-bottom:50px;
+	}
+	.h1{
+		font-weight: 300;
+	}
+	&-next-arrow{
+		height: 20px;
+		display: block;
+		.icon-arrow:hover{
+			color: #ffeb33;
+		}
+	}
+}
+.btn-primary{
+	text-transform: uppercase;
+	margin-bottom: 50px;
+}
+.primary-text-color{
+	color:$text-primary-color;
+}
+.invert-text-color{
+	color:$text-invert-color;
+}
+
+.header{
+	min-width:100%;
+	border-bottom: 1px solid $text-primary-color;
+	
+}
+.navbar{
+	padding: 0 15px;
+}
+
+.about{
+	text-align: center;
+	padding:6% 0;
+	
+}
+
+.block-heading{
+	margin-bottom:120px;
+	text-align: center;
+	&-description{
+		text-transform: uppercase;
+		color: $text-primary-color;
+	}
+	
+}
+
+
+.feature{
+	max-width: 300px;
+	margin:0 auto;
+	&-item{
+		float: left;
+		width: 33.33%;
+		padding:0 15px;
+		text-align: center;
+		list-style: none;
+	}
+	&-list{
+		margin: 0;
+		padding: 0;
+	}
+	&-heading{
+		display:inline-block;
+	}
+	&-number{
+		text-transform: uppercase;
+		color: $text-primary-color;
+		display: table-cell;
+		padding-right:17px;
+		font-size: 25px;
+		font-weight: 300;
+		border-right: 1px solid $text-primary-color;
+		vertical-align: middle;
+	}
+	&-title{
+		display: table-cell;
+		padding-left:17px;
+		font-weight: normal;
+		text-transform: uppercase;
+		color: $text-dark-color;
+		line-height: 1.2;
+		vertical-align: middle;
+		text-align: left;
+	}
+
+}
+
+.quote{
+	padding: 10% 0;
+	background: #ffeb33;
+	text-align: center;
+	.block-heading{
+		margin-bottom:15px;
+	}
+	h3{
+		font-style: italic;
+		font-weight: 300;
+		line-height: 1.6;
+	}
+	.block-heading-description{
+		color:$text-invert-color;
+	}
+}
+
+.portfolio{
+	text-align: center;
+	padding: 6% 0;
+	&-block{
+		margin: 0;
+		padding: 0;
+		margin-bottom: 30px;
+	}
+	&-item{
+		max-width: 25%;
+		margin-bottom: 30px;
+		float: left;
+		list-style: none;
+		padding:0 15px;
+	}
+	&-img-holder{
+		margin:0 auto;
+		width:270px;
+		height:200px;
+		background: #f3f3f3;
+		position: relative;
+		cursor: pointer;
+		&:hover{
+			background: #ffeb33;
+			.block-heading{
+				display: block;
+			}
+		}
+	}
+	&-text-holder{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		.block-heading{
+			text-align: center;
+			margin-bottom:0;
+			display: none;
+			position:absolute;
+			top: 50%;
+			left: 0;
+			right: 0;
+			transform: translate(0, -50%);
+			&-title{
+				text-transform: uppercase;
+				color: $text-dark-color;
+				font-size: 20px;
+				font-weight: normal;
+			}
+			&-description{
+				color: $text-invert-color;
+			}
+		}
+		
+	}
+	&-arrow{
+		.icon-arrow{
+		color: $text-dark-color;
+		&:hover{
+			color: $text-base-color;
+		}
+		}
+	}
+}
+
+.clients{
+	padding: 6% 0;
+	&-item{
+		text-align: center;
+		width:105px;
+		margin-bottom: 15px;
+		[class^="icon-"]:hover, [class*=" icon-"]:hover{
+			color:$text-base-color;
+		}
+	}
+}
