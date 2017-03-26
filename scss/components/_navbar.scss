@@ -21,7 +21,7 @@
 		margin-right:15px;
 		border:1px solid transparent;
 		text-transform: uppercase;
-		&:hover, &:focus, &:active{
+		&:hover, &:focus, &:active,&.active{
 			border:1px solid $text-primary-color;
 		}
 	}

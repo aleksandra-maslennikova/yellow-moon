@@ -11,8 +11,8 @@
 @import "components/helpers";
 @import "components/global";
 @import "components/type";
-@import "components/btns";
 @import "components/forms";
+@import "components/btns";
 @import "components/block";
 @import "components/navbar";
 @import "components/background";
@@ -70,10 +70,13 @@ h6,
 		}
 	}
 }
-.btn-primary{
+
+
+.btn{
 	text-transform: uppercase;
 	margin-bottom: 50px;
 }
+
 .primary-text-color{
 	color:$text-primary-color;
 }
@@ -81,10 +84,12 @@ h6,
 	color:$text-invert-color;
 }
 
+.icon-arrow{
+	padding: 5px;
+}
 .header{
 	min-width:100%;
 	border-bottom: 1px solid $text-primary-color;
-	
 }
 .navbar{
 	padding: 0 15px;
@@ -93,7 +98,6 @@ h6,
 .about{
 	text-align: center;
 	padding:6% 0;
-	
 }
 
 .block-heading{
@@ -105,46 +109,48 @@ h6,
 	}
 	
 }
-
+.hidden{
+	display: none;
+}
 
 .feature{
-	max-width: 300px;
-	margin:0 auto;
+	margin:	0;
+	padding:0;
 	&-item{
-		float: left;
-		width: 33.33%;
-		padding:0 15px;
-		text-align: center;
-		list-style: none;
+		width:33.33%;
+		float:left;
+		list-style: none;	
+		padding: 0 10px;
 	}
-	&-list{
-		margin: 0;
-		padding: 0;
+	&-content{
+		width:290px; 
+		margin: 0 auto;
 	}
 	&-heading{
-		display:inline-block;
+		position: relative;
+		min-height: 85px;
 	}
 	&-number{
 		text-transform: uppercase;
 		color: $text-primary-color;
-		display: table-cell;
-		padding-right:17px;
+		position: absolute;
+		top: 5px;
+		left: 0;
 		font-size: 25px;
 		font-weight: 300;
-		border-right: 1px solid $text-primary-color;
-		vertical-align: middle;
 	}
 	&-title{
-		display: table-cell;
-		padding-left:17px;
+		padding:12px 7px 17px 17px;
 		font-weight: normal;
 		text-transform: uppercase;
 		color: $text-dark-color;
 		line-height: 1.2;
-		vertical-align: middle;
-		text-align: left;
+		margin-left: 45px;
+		margin-bottom: 15px;
+		
+		text-align:left;
+		border-left: 1px solid $text-primary-color;
 	}
-
 }
 
 .quote{
@@ -186,8 +192,21 @@ h6,
 		background: #f3f3f3;
 		position: relative;
 		cursor: pointer;
+		overflow: hidden;
+		img {
+			max-width: none;
+			height: auto;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			min-width: 100%;
+			min-height: 100%;
+		}
 		&:hover{
-			background: #ffeb33;
+			.portfolio-text-holder{
+				background: #ffeb33;
+			}
 			.block-heading{
 				display: block;
 			}
@@ -222,10 +241,10 @@ h6,
 	}
 	&-arrow{
 		.icon-arrow{
-		color: $text-dark-color;
-		&:hover{
+			color: $text-dark-color;
+			&:hover{
 			color: $text-base-color;
-		}
+			}
 		}
 	}
 }
@@ -237,6 +256,41 @@ h6,
 		width:105px;
 		margin-bottom: 15px;
 		[class^="icon-"]:hover, [class*=" icon-"]:hover{
+			color:$text-base-color;
+		}
+	}
+}
+
+
+.contact{
+	padding: 6% 0;
+	&-form{
+		max-width: 970px;
+		margin: 0 auto;
+	}
+}
+
+.footer{
+	padding: 40px 0;
+	width:100%;
+	.container{
+	padding: 0;
+	}
+	&-copyrights{
+		float: left;
+		color: $text-primary-color;
+		font-size: 13px;
+	}
+	&-socials{
+		float: right;
+		color:$text-invert-color;
+	}
+	[class^="icon-"], [class*=" icon-"]{
+		padding: 10px;
+		margin: 0 5px;
+		font-size:14px;
+		&:hover{
+			cursor: pointer;
 			color:$text-base-color;
 		}
 	}

@@ -55,4 +55,13 @@ $btn-border-color-hover: $btn-bg !default;
         background: $btn-bg-hover;
         border-color: $btn-border-color-hover;
     }
+    
+    &-dark{
+        color:$text-primary-color;
+        background: $text-dark-color;
+    }
+    &-submit{
+        display: block;
+        width:100%;
+    }
 }

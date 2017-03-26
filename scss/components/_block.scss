@@ -12,7 +12,7 @@
 	}
 	&-fill-height {
 		height: 100vh;
-		.block{
+		&.block{
 			&-header {
 				display: table-header-group;
 				height: 1%;
