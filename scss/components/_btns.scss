@@ -35,7 +35,6 @@ $btn-border-color-hover: $btn-bg !default;
 
 .btn {
     display: inline-block;
-    user-select: none;
     cursor: pointer;
     font-weight: normal;
     color: $btn-color;
@@ -54,14 +53,5 @@ $btn-border-color-hover: $btn-bg !default;
         color: $btn-color-hover;
         background: $btn-bg-hover;
         border-color: $btn-border-color-hover;
-    }
-    
-    &-dark{
-        color:$text-primary-color;
-        background: $text-dark-color;
-    }
-    &-submit{
-        display: block;
-        width:100%;
     }
 }

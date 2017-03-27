@@ -5,14 +5,12 @@
 	display: table;
 	width: 100%;
 	table-layout: fixed;
-	
-	
 	&-collapse {
 		padding: 0;
 	}
 	&-fill-height {
 		height: 100vh;
-		&.block{
+		.block{
 			&-header {
 				display: table-header-group;
 				height: 1%;
