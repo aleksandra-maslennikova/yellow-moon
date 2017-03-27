@@ -7,7 +7,8 @@ $form-padding-x: 20px !default;
 $form-font-size: 14px !default;
 $form-line-height: 1.4 !default;
 $form-margin-bottom: 15px !default;
-
+$form-margin-left:0 !default;
+$form-margin-right:0 !default;
 $form-label-color: #eaeef1 !default;
 $form-label-font-size: 14px !default;
 $form-label-margin-bottom: 4px !default;
@@ -49,6 +50,12 @@ $form-label-margin-bottom: 4px !default;
 .form {
 	&-group {
 		margin-bottom: $form-margin-bottom;
+        margin-left: $form-margin-left;
+        margin-right: $form-margin-right;
+        &.inline{
+            float: left;
+            width: calc(50% - 30px);
+        }
 	}
     &-control {
         width: 100%;
@@ -63,6 +70,16 @@ $form-label-margin-bottom: 4px !default;
         $padding-y: ($form-height - ($form-font-size * $form-line-height)) / 2;
         padding: $padding-y $form-padding-x;
         @include placeholder(#fff);
+        &.submit{
+        color:$text-primary-color;
+        background: $text-dark-color;
+        border: none;
+        text-transform: uppercase;
+        &:hover{
+            cursor: pointer;
+            background: lighten($text-dark-color, 30%)
+        }
+        }
     }
     &-label {
     	display: block;
@@ -70,4 +87,19 @@ $form-label-margin-bottom: 4px !default;
     	font-size: $form-label-font-size;
     	margin-bottom: $form-label-margin-bottom;
     }
+    &-textarea{
+        height: auto;
+        resize: none;
+    }
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }

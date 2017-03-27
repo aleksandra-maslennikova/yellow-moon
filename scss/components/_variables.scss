@@ -12,18 +12,13 @@ $link-color: $text-base-color;
 $link-color-hover: $text-dark-color;
 $heading-color: $text-dark-color;
 $heading-font-weight: 400;
+$heading-margin-1: 0.8em;
 $heading-font-size-1: ceil($font-size-base * 2.666); //~40px
-$heading-margin-1: 1em !default;
 $heading-font-size-2: ceil($font-size-base * 2); //~30px
-$heading-margin-2: 1em !default;
 $heading-font-size-3: ceil($font-size-base * 1.666); //~25px
-$heading-margin-3: 1em !default;
 $heading-font-size-4: ceil($font-size-base * 1.2); //~18px
-$heading-margin-4: 1em !default;
-$heading-font-size-5:ceil($font-size-base * 1); //~15px
-$heading-margin-5: 1em !default;
+$heading-font-size-5: ceil($font-size-base * 1); //~15px
 $heading-font-size-6: ceil($font-size-base * 0.8); //~12px
-$heading-margin-6: 1em !default;
 
 
 //-----------------Buttons---------------//
@@ -32,8 +27,23 @@ $btn-color: #fff;
 $btn-font-size: $font-size-base;
 $btn-bg: transparent;
 $btn-border: 1px solid $text-primary-color;
-$btn-border-radius:none;
+$btn-border-radius:0;
 $btn-padding: 22px 85px;
-$btn-color-hover: none;
+$btn-color-hover: $btn-color;
 $btn-bg-hover: rgba(0,0,0,0.3);
-$btn-border-color-hover: $btn-border;
+$btn-border-color-hover: $text-primary-color;
+
+
+//--------------FORMS---------------------//
+
+$form-color:#fff;
+$form-bg: $text-primary-color;
+$form-border: 1px solid transparent;
+$form-border-radius: 0;
+$form-height: 50px;
+$form-padding-x: 23px;
+$form-font-size: 15px;
+$form-line-height: 1.534;
+$form-margin-bottom: 20px;
+$form-margin-left: 15px;
+$form-margin-right: 15px;
